@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;            
+        }
+               
+    </style>
+</head>
+<body>
+    <div style="background-color: black; height: 750px; border: 1px solid black;">
+    <div style="margin: 150px 100px; height: 500px; ">
+    <input type="number" id="fno" placeholder="First Number" style="margin: 30px 500px; font-size: 35px;">
+    <br>
+    
+    <input type="number" id="sno" placeholder="Second Number" style="margin: 30px 500px; font-size: 35px;">
+    <h4 style="margin: 30px 400px; font-size: 35px; color: white;">Result is :   <span id="ans" style="color: red; display: inline-block; margin-left: 50px; font-size: 35px;"></span></h4>
+    <br>
+        <div style="margin: 30px 50px; display: flex; justify-content: space-around;">
+    <button id="add" style="font-size: 35px; padding: 5px 15px; background-color: yellow; border:3px solid white;">ADD</button>
+    <button id="subtract" style="font-size: 35px; padding: 5px 15px; background-color: deepskyblue; border:3px solid white;">SUBTRACT</button>
+    <button id="multiply" style="font-size: 35px; padding: 5px 15px; background-color: rgb(111, 226, 111); border:3px solid white;">MULTIPLY</button>
+    <button id="divide" style="font-size: 35px; padding: 5px 15px; background-color: darkgoldenrod; border:3px solid white;">DIVIDE</button>
+</div>
+</div>
+</div>
+    <script>
+const no1 = document.querySelector('#fno')
+const no2 = document.querySelector('#sno')
+const res1 = document.querySelector('#add')
+const res2 = document.querySelector('#subtract')
+const res3 = document.querySelector('#multiply')
+const res4 = document.querySelector('#divide')
+const ans = document.querySelector('#ans')
+
+res1.addEventListener('click',function (){
+    ans.innerText = parseInt(no1.value) + parseInt(no2.value) ;
+})
+res2.addEventListener('click',function (){
+    ans.innerText = parseInt(no1.value) - parseInt(no2.value) ;
+})
+res3.addEventListener('click',function (){
+    ans.innerText = parseInt(no1.value) * parseInt(no2.value) ;
+})
+res4.addEventListener('click',function (){
+    if(parseInt(no2.value)){
+    ans.innerText = parseInt(no1.value) / parseInt(no2.value) ;
+    }
+    else{
+        ans.innerText = "NOT DEFINED";
+    }
+})
+    </script>
+
+</body>
+</html>
